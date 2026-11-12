@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <title>Skills Test - 2nd Quarter</title>
+
+    <style>
+
+       /* I like pink a lot so I made everything pink, including the buttons—I custom made it oh yes and removed btn-primary and other stuff */
+        body{
+            background: linear-gradient(135deg,#ffd6e8,#ffb3d1);
+            min-height:100vh;
+        }
+
+        .card{
+            border:none;
+            border-radius:20px;
+        }
+
+        .card-header{
+            border-radius:20px 20px 0 0 !important;
+        }
+
+        .bg-custom{
+            background:#ff8fb8;
+        }
+
+        .text-custom{
+            color:#e0629a;
+        }
+
+        .btn-custom{
+            background:#ff8fb8;
+            border-color:#ff8fb8;
+            color:#fff;
+        }
+
+        .btn-custom:hover{
+            background:#f77aa8;
+            border-color:#f77aa8;
+            color:#fff;
+        }
+
+        .alert-custom{
+            background:#fff0f6;
+            border-color:#ffd0e3;
+            color:#a14670;
+        }
+
+        #result{
+            min-height:120px;
+            font-size:1.05rem;
+            background:#f8f9fa;
+            border-left:6px solid #ff8fb8;
+        }
+
+        .footer-text{
+            font-size:0.9rem;
+            color:#6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7 col-md-9">
+
+            <div class="card shadow-lg">
+
+                <div class="card-header bg-custom text-white text-center p-4">
+
+                    <h2>
+                        Cute Desserts
+                    </h2>
+
+                    <p class="mb-0">
+                        Dessert Information Finder
+                    </p>
+
+                </div>
+
+                <div class="card-body p-4">
+
+                    <div class="alert alert-custom">
+                        <strong>Instructions:</strong><br>
+                        Enter the <b>name</b> of a dessert
+                        (Example: Mochi, Tiramisu, Macaron, Halo-Halo).
+                    </div>
+
+                    <form>
+
+                        <div class="mb-3">
+
+                            <label class="form-label fw-bold">
+                                <i class="bi bi-search"></i>
+                                Dessert Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="dessert"
+                                class="form-control form-control-lg"
+                                placeholder="Enter the dessert here">
+
+                        </div>
+
+                        <div class="d-grid">
+
+                            <input
+                                type="button"
+                                py-click="dessert_checker"
+                                value="Check Details"
+                                class="btn btn-custom btn-lg">
+
+                        </div>
+
+                    </form>
+
+                    <hr>
+
+                    <h5 class="text-custom">
+                        <i class="bi bi-card-list"></i>
+                        Result
+                    </h5>
+
+                    <div id="result" class="rounded p-3 shadow-sm">
+
+                    </div>
+
+                </div>
+
+                <div class="scard-footer bg-light text-center footer-text">
+
+                    <i class="bi bi-lightbulb-fill text-warning"></i>
+                    Skills Test • 2nd Quarter • Zoe Karsten M Embalsado
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<py-script src="main.py"></py-script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
